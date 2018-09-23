@@ -59,5 +59,10 @@ extension TestableProperty where TestableType: Response {
     public func has(content value: String) -> Bool {
         return contentString == value
     }
+
+    /// Test response content containing string
+    public func contains(content value: String) -> Bool {
+        return contentString.contains(value)
+    }
     
 }
